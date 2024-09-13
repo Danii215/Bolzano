@@ -1,0 +1,40 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as Burger from "./Burger.stories";
+
+<Meta title="Burger" of={Burger} />
+
+# Documentação do átomo Burger
+
+---
+
+O componente `Burger` é um botão em formato de menu - hambúrguer, clássico. Ao
+clicar, ele faz uma animação e se transforma em X para indicar o usuário que
+ele possa fechar.
+
+Esse componente deve ser usado especialmente para abrir menus, em especial, em
+ambiente mobile.
+
+-   **Componente de Cliente**
+
+## Props
+
+### onClick
+
+-   **Tipo**: `MouseEventHandler<HTMLButtonElement>`
+-   **Descrição**: Função que executará ao clicar no componente.
+
+## Stories
+
+### Default
+
+<Canvas of={Burger.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { Burger } from "./Burger";
+
+function App() {
+    return <Burger onClick={() => console.log("Hello World!")} />;
+}
+```

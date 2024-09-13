@@ -1,0 +1,73 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as Header from "./Header.stories";
+
+<Meta title="Header" of={Header} />
+
+# Documentação da molécula Header
+
+---
+
+O Header é a "parte de cima" do website, contendo os acessos às páginas que
+podem interessar ao usuário.
+
+Esse componente se adapta ao tamanho de tela. Em telas menores que 800px, o
+Header recebe um botão de modelo menu - hambúrguer, que, ao abrir, exibe os
+acessos citados anteriormente, que estavam escondidos em dispositivos menores.
+
+Caso não haja esses acessos (itens), o hambúrguer não aparece. Tudo é
+centralizado.
+
+-   **Possui componente de Cliente: Burger**
+
+## Props
+
+### items
+
+-   **Tipo**: `Array<{href: string; label: string; }>`
+-   **Descrição**: Lista de itens para preencher este Header com. Devem ter um
+    texto (label) e um link (href) que eles levam para.
+
+## Stories
+
+### Default
+
+<Canvas of={Header.Default} />
+
+### Empty
+
+<Canvas of={Header.Empty} />
+
+## Exemplo de uso
+
+```tsx
+import { Header } from "./Header";
+
+function App() {
+    return (
+        <Header
+            items={[
+                {
+                    href: "/",
+                    label: "Início",
+                },
+                {
+                    href: "/matematico",
+                    label: "Sobre o Matemático",
+                },
+                {
+                    href: "/teorema",
+                    label: "Sobre o Teorema",
+                },
+                {
+                    href: "/bisseccao",
+                    label: "Método da Bissecção",
+                },
+                {
+                    href: "/calculadora",
+                    label: "Calculadora",
+                },
+            ]}
+        />
+    );
+}
+```

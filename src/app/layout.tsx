@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "@/assets/sass/main.scss";
+import { Footer, Header } from "@/components";
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
@@ -44,7 +45,19 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="pt-BR">
-            <body>{children}</body>
+            <body>
+                <Header
+                    items={[
+                        { href: "/", label: "Início" },
+                        { href: "/matematico", label: "Sobre o Matemático" },
+                        { href: "/teorema", label: "Sobre o Teorema" },
+                        { href: "/bisseccao", label: "Método da Bissecção" },
+                        { href: "/calculadora", label: "Calculadora" },
+                    ]}
+                />
+                {children}
+                <Footer />
+            </body>
         </html>
     );
 }

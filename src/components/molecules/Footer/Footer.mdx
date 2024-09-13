@@ -1,0 +1,32 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as Footer from "./Footer.stories";
+
+<Meta title="Footer" of={Footer} />
+
+# Documentação da molécula Footer
+
+---
+
+texto
+
+-   **Componente de Servidor**
+
+## Props
+
+Não aplicável.
+
+## Stories
+
+### Default
+
+<Canvas of={Footer.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { Footer } from "./Footer";
+
+function App() {
+    return <Footer />;
+}
+```

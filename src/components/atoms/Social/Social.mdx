@@ -1,0 +1,50 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as Social from "./Social.stories";
+
+<Meta title="Social" of={Social} />
+
+# Documentação do átomo Social
+
+---
+
+Representa uma bolinha transparente com a logo de uma rede social, para acessar
+a rede do autor. Pode ser Instagram ou Linkedin e só é visível em fundo escuro.
+
+-   **Componente de Servidor**
+
+## Props
+
+### href
+
+-   **Tipo**: `string`
+-   **Descrição**: O link para o perfil na rede.
+
+### icon
+
+-   **Tipo**: `"instagram" | "linkedin"`
+-   **Descrição**: A logo que será exibida.
+
+## Stories
+
+### Instagram
+
+<Canvas of={Social.Instagram} />
+
+### Big
+
+<Canvas of={Social.Linkedin} />
+
+## Exemplo de uso
+
+```tsx
+import { Social } from "./Social";
+
+function App() {
+    return (
+        <Social
+            href="https://www.instagram.com/danilomovio/"
+            icon="instagram"
+        />
+    );
+}
+```

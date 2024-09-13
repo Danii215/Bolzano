@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "/src/assets/sass/utils/fonts";
+@import "/src/assets/sass/utils/variables";
 
 *,
 *::after,
@@ -17,13 +19,17 @@ body {
     box-sizing: border-box;
     position: relative;
     scroll-behavior: smooth;
-    font-family: "Inter", sans-serif;
+    font-family: $fontInter;
 }
 
 main {
     position: relative;
     max-width: 100vw;
     overflow-x: hidden;
+
+    &:not(:has(*)) {
+        height: 60vh;
+    }
 }
 
 img {
@@ -73,10 +79,10 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-    background: #ffffff;
+    background: $silver;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #000000;
+    background: $primary;
     border-radius: 10px;
 }

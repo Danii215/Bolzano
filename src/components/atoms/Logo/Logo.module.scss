@@ -1,0 +1,37 @@
+@import "/src/assets/sass/utils/fonts";
+
+.logo {
+    & h1 {
+        display: flex;
+        align-items: center;
+        gap: 0.425rem;
+
+        color: #000;
+        font-family: $fontInter;
+        font-size: 2rem;
+        font-weight: 500;
+
+        &::before {
+            content: "";
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='24' fill='none' viewBox='0 0 36 24'%3E%3Cpath fill='%23263238' d='m19.532 13.134-5.391 9.233-5.391-9.233h10.782Zm1.444-.825H7.3L14.14 24l6.836-11.691ZM28.904 1.65l5.391 9.233H23.513l5.391-9.233Zm0-1.65-6.84 11.691h13.681L28.905 0Z'/%3E%3Cpath fill='%234CAF4F' d='m.745 0 5.736 10.34L12.75.26.745 0ZM14.14.906l6.017 10.283H8.112L14.141.906Zm7.567 12.528L27.729 24H15.398l6.122-10.566h.187Zm1.303-.641 5.894 10.405 5.976-10.405H23.01Z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            display: block;
+            width: 3.6rem;
+            height: 2.4rem;
+        }
+    }
+
+    &--big {
+        & h1 {
+            color: #fff;
+            font-size: 3.6rem;
+
+            &::before {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='24' fill='none' viewBox='0 0 36 24'%3E%3Cpath fill='%23263238' d='m19.532 13.134-5.391 9.233-5.391-9.233h10.782Zm1.444-.825H7.3L14.14 24l6.836-11.691ZM28.904 1.65l5.391 9.233H23.513l5.391-9.233Zm0-1.65-6.84 11.691h13.681L28.905 0Z' style='&%2310; fill: %23fff;&%2310;'/%3E%3Cpath fill='%234CAF4F' d='m.745 0 5.736 10.34L12.75.26.745 0ZM14.14.906l6.017 10.283H8.112L14.141.906Zm7.567 12.528L27.729 24H15.398l6.122-10.566h.187Zm1.303-.641 5.894 10.405 5.976-10.405H23.01Z'/%3E%3C/svg%3E");
+                width: 4.3rem;
+                height: 3rem;
+            }
+        }
+    }
+}

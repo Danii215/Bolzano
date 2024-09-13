@@ -1,0 +1,62 @@
+@import "/src/assets/sass/utils/variables.scss";
+
+.burger {
+    width: 3rem;
+    height: 3rem;
+
+    &__line {
+        position: relative;
+
+        width: 3rem;
+        height: 0.5rem;
+        background-color: $black;
+        border-radius: 2rem;
+
+        transition: all 0.2s ease-in-out;
+
+        &::before {
+            content: "";
+            display: block;
+
+            position: absolute;
+            top: -1rem;
+
+            width: 3rem;
+            height: 0.5rem;
+            background-color: $black;
+            border-radius: 2rem;
+
+            transition: all 0.2s ease-in-out;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+
+            position: absolute;
+            top: 1rem;
+
+            width: 3rem;
+            height: 0.5rem;
+            background-color: $black;
+            border-radius: 2rem;
+
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    &[data-open] {
+        & > div {
+            background-color: #00000000;
+            transform: rotate(45deg) translate(0rem, -1rem);
+
+            &::before {
+                top: 1rem;
+            }
+
+            &::after {
+                transform: rotate(-90deg);
+            }
+        }
+    }
+}

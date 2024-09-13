@@ -1,0 +1,42 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as Logo from "./Logo.stories";
+
+<Meta title="Logo" of={Logo} />
+
+# Documentação do átomo Logo
+
+---
+
+O componente `Logo` é utilizado para exibir o logotipo da aplicação, com a
+opção de ser renderizado em dois tamanhos diferentes. Ao clicá-lo, o usuário é
+redirecionado pra home.
+
+-   **Componente de Servidor**
+
+## Props
+
+### isBig
+
+-   **Tipo**: `boolean`
+-   **Descrição**: Define se o logo deve ser exibido em um tamanho maior. Isso
+    também muda a cor do texto para branco.
+
+## Stories
+
+### Default
+
+<Canvas of={Logo.Default} />
+
+### Big
+
+<Canvas of={Logo.Big} />
+
+## Exemplo de uso
+
+```tsx
+import { Logo } from "./Logo";
+
+function App() {
+    return <Logo isBig />;
+}
+```
