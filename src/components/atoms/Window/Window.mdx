@@ -1,0 +1,32 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as Window from "./Window.stories";
+
+<Meta title="Window" of={Window} />
+
+# Documentação do átomo Window
+
+---
+
+A imagem de uma janela de aplicativo. Usado na home em conjunto com outros átomos.
+
+-   **Componente de Servidor**
+
+## Props
+
+Não aplicável.
+
+## Stories
+
+### Default
+
+<Canvas of={Window.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { Window } from "./Window";
+
+function App() {
+    return <Window />;
+}
+```

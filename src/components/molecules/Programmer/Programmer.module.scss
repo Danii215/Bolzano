@@ -1,0 +1,84 @@
+.programmer {
+    position: relative;
+    height: 40rem;
+    width: 40rem;
+    transition: all 0.3s ease-in-out;
+
+    & img:nth-child(2) {
+        position: absolute;
+        top: 5%;
+        left: 37%;
+        transition: all 0.3s ease-in-out;
+        animation: window 0.8s;
+    }
+
+    & img:nth-child(3) {
+        position: absolute;
+        bottom: 0%;
+        left: 27%;
+        transition: all 0.3s ease-in-out;
+        animation: gear 0.8s;
+    }
+
+    & img:nth-child(4) {
+        position: absolute;
+        bottom: 2%;
+        right: 5%;
+        transition: all 0.3s ease-in-out;
+        animation: man 0.8s;
+    }
+
+    &:hover {
+        transform: scale(0.95);
+
+        & img:nth-child(2) {
+            top: -2%;
+            left: 42%;
+            transform: scale(1.1);
+        }
+
+        & img:nth-child(3) {
+            bottom: -5%;
+            transform: scale(1.1);
+        }
+
+        & img:nth-child(4) {
+            bottom: -2%;
+            right: 5%;
+            transform: scale(1.1);
+        }
+    }
+}
+
+@keyframes window {
+    from {
+        opacity: 0;
+        left: 27%;
+    }
+    to {
+        opacity: 1;
+        left: 37%;
+    }
+}
+
+@keyframes gear {
+    from {
+        opacity: 0;
+        bottom: -10%;
+    }
+    to {
+        opacity: 1;
+        bottom: 0%;
+    }
+}
+
+@keyframes man {
+    from {
+        opacity: 0;
+        right: -10%;
+    }
+    to {
+        opacity: 1;
+        right: 5%;
+    }
+}

@@ -1,3 +1,9 @@
 export { Logo } from "./Logo/Logo";
 export { Burger } from "./Burger/Burger";
 export { Social } from "./Social/Social";
+export { Man } from "./Man/Man";
+export { Gear } from "./Gear/Gear";
+export { Computer } from "./Computer/Computer";
+export { Window } from "./Window/Window";
+export { PageTitle } from "./PageTitle/PageTitle";
+export { Coin } from "./Coin/Coin";

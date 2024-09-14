@@ -1,0 +1,32 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as Gear from "./Gear.stories";
+
+<Meta title="Gear" of={Gear} />
+
+# Documentação do átomo Gear
+
+---
+
+A imagem de uma engrenagem. Usado na home em conjunto com outros átomos.
+
+-   **Componente de Servidor**
+
+## Props
+
+Não aplicável.
+
+## Stories
+
+### Default
+
+<Canvas of={Gear.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { Gear } from "./Gear";
+
+function App() {
+    return <Gear />;
+}
+```

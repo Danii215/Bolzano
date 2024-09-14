@@ -1,0 +1,73 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as Banner from "./Banner.stories";
+
+<Meta title="Banner" of={Banner} />
+
+# Documentação do organismo Banner
+
+---
+
+O organismo `Banner` representa um `PageTitle` em conjunto com alguma figura ao
+seu lado direito. Ambos são espaçados de forma a serem centralizados e serve
+para introduzir o usuário à uma nova página. É o primeiro componente
+renderizado depois do `Header`.
+
+Esse componente adiciona uma animação de flutuação à figura à direita.
+
+-   **Componente de Servidor**
+
+## Props
+
+Todas as props do `PageTitle`:
+
+### title
+
+-   **Tipo**: `string`
+-   **Descrição**: Texto de título, grande, que aparecerá em cor cinza. Usado
+    em primeiro.
+
+### titleHighlight
+
+-   **Tipo**: `string`
+-   **Descrição**: Texto de título, grande, que aparecerá na cor padrão do
+    projeto. Usado depois do `title`.
+
+### subtitle
+
+-   **Tipo**: `string`
+-   **Descrição**: Subtítulo, é um pequeno parágrafo abaixo do título, cinza.
+
+Somado à:
+
+### children
+
+-   **Tipo**: `React.ReactNode`
+-   **Descrição**: Esse componente espera um componente filho para colocar à
+    direita.
+
+## Stories
+
+### Default
+
+<Canvas of={Banner.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { Banner } from "./Banner";
+
+function App() {
+    return (
+        <Banner
+            text={{
+                title: "Projeto de",
+                titleHighlight: "Cálculo Numérico Computacional",
+                subtitle:
+                    "Projeto explicativo sobre o matemático Bernard Bolzano, seu trabalho, e o funcionamento do método da bissecção no cálculo de zero de funções.",
+            }}
+        >
+            <Programmer />
+        </Banner>
+    );
+}
+```

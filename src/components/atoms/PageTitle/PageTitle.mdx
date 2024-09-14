@@ -1,0 +1,62 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as PageTitle from "./PageTitle.stories";
+
+<Meta title="PageTitle" of={PageTitle} />
+
+# Documentação do átomo PageTitle
+
+---
+
+O componente `PageTitle` é um título principal para ser usado no começo, logo
+após o Header, em todas as páginas. Ele separa o título em cor cinza e a cor
+padrão.
+
+Após ele, há um subtítulo: Um pequeno parágrafo, cinza, que pode ter mais
+detalhes.
+
+-   **Componente de Servidor**
+
+## Props
+
+### title
+
+-   **Tipo**: `string`
+-   **Descrição**: Texto de título, grande, que aparecerá em cor cinza. Usado
+    em primeiro.
+
+### titleHighlight
+
+-   **Tipo**: `string`
+-   **Descrição**: Texto de título, grande, que aparecerá na cor padrão do
+    projeto. Usado depois do `title`.
+
+### subtitle
+
+-   **Tipo**: `string`
+-   **Descrição**: Subtítulo, é um pequeno parágrafo abaixo do título, cinza.
+
+## Stories
+
+### Default
+
+<Canvas of={PageTitle.Default} />
+
+### Subtitle Less
+
+<Canvas of={PageTitle.SubtitleLess} />
+
+## Exemplo de uso
+
+```tsx
+import { PageTitle } from "./PageTitle";
+
+function App() {
+    return (
+        <PageTitle
+            title="Projeto de"
+            titleHighlight="Cálculo Numérico Computacional"
+            subtitle="Muito texto"
+        />
+    );
+}
+```

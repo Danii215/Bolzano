@@ -1,0 +1,13 @@
+@import "/src/assets/sass/utils/variables.scss";
+
+.coin {
+    border-radius: 100%;
+    width: 31.2rem;
+    height: 31.2rem;
+    object-fit: cover;
+    object-position: 10% 10%;
+    border: 0.5rem $primary solid;
+    -webkit-box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.75);
+    box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.75);
+}

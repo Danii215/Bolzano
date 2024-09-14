@@ -1,0 +1,58 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as Coin from "./Coin.stories";
+
+<Meta title="Coin" of={Coin} />
+
+# Documentação do átomo Coin
+
+---
+
+O componente `Coin` é uma imagem qualquer, dentro de um círculo com a cor
+padrão do projeto e sombreado abaixo.
+
+Esse componente serve principalmente para
+os banners introdutórios que existem em cada página.
+
+-   **Componente de Servidor**
+
+## Props
+
+### title
+
+-   **Tipo**: `string`
+-   **Descrição**: Texto que aparecerá quando o usuário passa o mouse por cima
+    da imagem, ou quando a imagem não carregar.
+
+### image
+
+-   **Tipo**: `StaticFile`
+-   **Descrição**: Imagem dentro do círculo verde sombreado.
+
+## Stories
+
+### Bernard
+
+<Canvas of={Coin.Bernard} />
+
+### Teorema
+
+<Canvas of={Coin.Teorema} />
+
+### Bissecção
+
+<Canvas of={Coin.Bissecção} />
+
+### Calculadora
+
+<Canvas of={Coin.Calculadora} />
+
+## Exemplo de uso
+
+```tsx
+import { Coin } from "./Coin";
+import bernard from "@/assets/img/bernard.jpeg";
+
+function App() {
+    return <Coin title="Bernard Bolzano" src={bernard} />;
+}
+```

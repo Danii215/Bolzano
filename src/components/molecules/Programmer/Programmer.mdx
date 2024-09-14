@@ -1,0 +1,36 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as Programmer from "./Programmer.stories";
+
+<Meta title="Programmer" of={Programmer} />
+
+# Documentação da molécula Programmer
+
+---
+
+Esse componente `Programmer` representa 4 SVGs que ilustram um programador
+criando ou usando um aplicativo para auxiliá-lo à alguma tarefa específica.
+
+Possui animação de entrada quando o componente é montado e ao passar o mouse
+por cima.
+
+-   **Componente de Servidor**
+
+## Props
+
+Não aplicável.
+
+## Stories
+
+### Default
+
+<Canvas of={Programmer.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { Programmer } from "./Programmer";
+
+function App() {
+    return <Programmer />;
+}
+```

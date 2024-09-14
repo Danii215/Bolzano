@@ -1,0 +1,32 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as Computer from "./Computer.stories";
+
+<Meta title="Computer" of={Computer} />
+
+# Documentação do átomo Computer
+
+---
+
+A imagem de um computador. Usado na home em conjunto com outros átomos.
+
+-   **Componente de Servidor**
+
+## Props
+
+Não aplicável.
+
+## Stories
+
+### Default
+
+<Canvas of={Computer.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { Computer } from "./Computer";
+
+function App() {
+    return <Computer />;
+}
+```

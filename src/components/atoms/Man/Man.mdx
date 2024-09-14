@@ -1,0 +1,32 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as Man from "./Man.stories";
+
+<Meta title="Man" of={Man} />
+
+# Documentação do átomo Man
+
+---
+
+A imagem de um homem. Usado na home em conjunto com outros átomos.
+
+-   **Componente de Servidor**
+
+## Props
+
+Não aplicável.
+
+## Stories
+
+### Default
+
+<Canvas of={Man.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { Man } from "./Man";
+
+function App() {
+    return <Man />;
+}
+```

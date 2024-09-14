@@ -1,0 +1,26 @@
+@import "/src/assets/sass/utils/variables";
+
+.banner {
+    background-color: $silver;
+    padding: 9.6rem 0;
+
+    & > div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        & section:not(:first-of-type),
+        & > img {
+            animation: float 2s alternate-reverse infinite ease-in-out;
+        }
+    }
+}
+
+@keyframes float {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(0, -5%);
+    }
+}
