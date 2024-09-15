@@ -1,0 +1,32 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as Phone from "./Phone.stories";
+
+<Meta title="Phone" of={Phone} />
+
+# Documentação do átomo Phone
+
+---
+
+A imagem de um celular gigante. Usado na home em conjunto com outros átomos.
+
+-   **Componente de Servidor**
+
+## Props
+
+Não aplicável.
+
+## Stories
+
+### Default
+
+<Canvas of={Phone.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { Phone } from "./Phone";
+
+function App() {
+    return <Phone />;
+}
+```

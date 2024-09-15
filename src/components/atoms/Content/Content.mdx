@@ -1,0 +1,80 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as Content from "./Content.stories";
+
+<Meta title="Content" of={Content} />
+
+# Documentação do átomo Content
+
+---
+
+O componente `Content` é, literalmente, um conteúdo textual padrão. Ele possui
+um título (h3), que é grande, em negrito, e destaca o tópico que será elaborado
+logo abaixo.
+
+Ele suporta subtítulos (h4) e parágrafos (p) dentro dele, e sua
+estilização os separa.
+
+-   **Componente de Servidor**
+
+## Props
+
+### title
+
+-   **Tipo**: `string`
+-   **Descrição**: Texto de título, grande, que aparecerá em cor cinza. Usado
+    em primeiro.
+
+### children
+
+-   **Tipo**: `React.ReactNode`
+-   **Descrição**: O conteúdo textual sob o tema especificado no título. Seus
+    subtítulos são tags h4 e os parágrafos são p. Não é recomendado usar outras
+    tags fora essas.
+
+## Stories
+
+### Default
+
+<Canvas of={Content.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { Content } from "./Content";
+
+function App() {
+    return (
+        <Content title="Biografia">
+            <h4>Infância e Educação</h4>
+            <p>
+                Bernard Bolzano nasceu em 5 de outubro de 1781, em Praga, que à
+                época fazia parte do Sacro Império Romano-Germânico. Seu pai, um
+                comerciante de ascendência italiana, e sua mãe, de origem alemã,
+                forneceram a Bolzano um ambiente familiar culto e incentivador.
+                Desde cedo, ele demonstrou uma inclinação para o estudo,
+                especialmente nas áreas de matemática, filosofia e religião. Sua
+                educação formal começou em Praga, onde estudou no ginásio e,
+                posteriormente, ingressou na Universidade de Praga em 1796, com
+                apenas 15 anos, onde cursou filosofia e matemática. O interesse
+                profundo de Bolzano pela religião o levou também a seguir o
+                caminho do sacerdócio, o que influenciaria grandemente sua visão
+                de mundo.
+            </p>
+            <h4>Carreira Acadêmica e Sacerdócio</h4>
+            <p>
+                Em 1805, Bolzano foi ordenado sacerdote católico e começou a
+                lecionar na Universidade de Praga, ocupando a cadeira de
+                Filosofia da Religião. Suas aulas eram conhecidas por unir
+                aspectos teológicos e filosóficos, e rapidamente ganharam
+                popularidade entre os alunos. No entanto, sua postura crítica em
+                relação à Igreja Católica e suas ideias progressistas sobre a
+                necessidade de reformas sociais e educativas causaram atritos
+                com as autoridades. Em 1819, Bolzano foi forçado a renunciar ao
+                seu cargo acadêmico por pressão política e eclesiástica, mas
+                continuou a desenvolver suas ideias matemáticas e filosóficas em
+                relativo isolamento.
+            </p>
+        </Content>
+    );
+}
+```

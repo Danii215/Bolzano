@@ -1,0 +1,33 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as ManHoldingPhone from "./ManHoldingPhone.stories";
+
+<Meta title="ManHoldingPhone" of={ManHoldingPhone} />
+
+# Documentação do átomo ManHoldingPhone
+
+---
+
+A imagem de um homem segurando um telefone gigante. Usado na home em conjunto
+com outros átomos.
+
+-   **Componente de Servidor**
+
+## Props
+
+Não aplicável.
+
+## Stories
+
+### Default
+
+<Canvas of={ManHoldingPhone.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { ManHoldingPhone } from "./ManHoldingPhone";
+
+function App() {
+    return <ManHoldingPhone />;
+}
+```

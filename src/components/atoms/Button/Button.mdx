@@ -1,0 +1,58 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as Button from "./Button.stories";
+
+<Meta title="Button" of={Button} />
+
+# Documentação do átomo Button
+
+---
+
+O componente `Button` é um botão simples, com a cor padrão do projeto. Pode ter
+ou não uma setinha à direita. O intuito é ser um Call To Action.
+
+-   **Componente de Servidor**
+
+## Props
+
+### text
+
+-   **Tipo**: `string`
+-   **Descrição**: O texto que aparece no botão.
+
+### href
+
+-   **Tipo**: `string`
+-   **Descrição**: O link que o usuário é redirecionado ao clicar no botão.
+
+### hasArrow
+
+-   **Tipo**: `boolean`
+-   **Descrição**: Define se deve existir uma setinha à direita.
+
+## Stories
+
+### Default
+
+<Canvas of={Button.Default} />
+
+### Has Arrow
+
+<Canvas of={Button.HasArrow} />
+
+### No Text
+
+<Canvas of={Button.NoText} />
+
+### No Text Has Arrow
+
+<Canvas of={Button.NoTextHasArrow} />
+
+## Exemplo de uso
+
+```tsx
+import { Button } from "./Button";
+
+function App() {
+    return <Button text="Ir para a calculadora" href="/calculator" hasArrow />;
+}
+```

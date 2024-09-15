@@ -1,0 +1,61 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as Card from "./Card.stories";
+
+<Meta title="Card" of={Card} />
+
+# Documentação do átomo Card
+
+---
+
+O componente `Card` é um cartão que convida o usuário a acessar uma página
+específica. Possui uma imagem, um título, e um texto para levá-lo à acessar.
+
+-   **Componente de Servidor**
+
+## Props
+
+### title
+
+-   **Tipo**: `string`
+-   **Descrição**: O título do cartão.
+
+### cta
+
+-   **Tipo**: `string`
+-   **Descrição**: O Call To Action, isto é, o texto que o botão que convida o
+    usuário
+
+### href
+
+-   **Tipo**: `string`
+-   **Descrição**: O link que o usuário será levado ao clicar no Call To
+    Action.
+
+### image
+
+-   **Tipo**: `StaticImport`
+-   **Descrição**: A imagem que aparece em cima do cartão.
+
+## Stories
+
+### Default
+
+<Canvas of={Card.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { Card } from "./Card";
+import Bernard from "@/app/assets/img/bernard.jpeg";
+
+function App() {
+    return (
+        <Card
+            title="Matemático Italiano Bernard Bolzano"
+            cta="Aprender"
+            href="/bolzano"
+            image={Bernard}
+        />
+    );
+}
+```

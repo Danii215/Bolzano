@@ -1,7 +1,5 @@
 import "@/assets/sass/pages/home.scss";
 import { Banner, Programmer } from "@/components";
-import { Coin } from "@/components/atoms";
-import Bernard from "@/assets/img/bernard.jpeg";
 
 export default function Home() {
     return (

@@ -1,0 +1,60 @@
+@import "/src/assets/sass/utils/variables.scss";
+
+.card {
+    width: fit-content;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    & img {
+        width: 36.8rem;
+        height: 28.6rem;
+
+        object-fit: cover;
+        object-position: 0 30%;
+        border-radius: 0.8rem;
+    }
+
+    &__square {
+        width: 85%;
+        margin-top: -7rem;
+
+        background-color: $silver;
+        border-radius: 0.8rem;
+
+        font-weight: 600;
+        font-size: 2rem;
+        text-align: center;
+
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: 1.6rem;
+
+        padding: 1.6rem;
+
+        & h5 {
+            color: $grey;
+        }
+
+        & a {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            color: $primary;
+
+            &::after {
+                content: "";
+                display: block;
+
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8' fill='%234caf4f'%3E%3Cpath d='M10.2503 7.00016L12.7201 4.53042C13.013 4.23752 13.013 3.76263 12.7201 3.46973L10.2503 1M12.5004 4.00008L1.50012 4.00008' stroke='%234caf4f' stroke-width='1.1' stroke-linecap='round'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+
+                width: 1.4em;
+                height: 0.8rem;
+            }
+        }
+    }
+}

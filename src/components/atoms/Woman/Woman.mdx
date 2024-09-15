@@ -1,0 +1,33 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as Woman from "./Woman.stories";
+
+<Meta title="Woman" of={Woman} />
+
+# Documentação do átomo Woman
+
+---
+
+A imagem de uma mulher sentada em um banco. Usado na home em conjunto com
+outros átomos.
+
+-   **Componente de Servidor**
+
+## Props
+
+Não aplicável.
+
+## Stories
+
+### Default
+
+<Canvas of={Woman.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { Woman } from "./Woman";
+
+function App() {
+    return <Woman />;
+}
+```

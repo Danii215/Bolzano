@@ -1,0 +1,33 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as WomanLiking from "./WomanLiking.stories";
+
+<Meta title="WomanLiking" of={WomanLiking} />
+
+# Documentação do átomo WomanLiking
+
+---
+
+A imagem de uma mulher com um balão com joinha. Usado na home em conjunto com
+outros átomos.
+
+-   **Componente de Servidor**
+
+## Props
+
+Não aplicável.
+
+## Stories
+
+### Default
+
+<Canvas of={WomanLiking.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { WomanLiking } from "./WomanLiking";
+
+function App() {
+    return <WomanLiking />;
+}
+```
