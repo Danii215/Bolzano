@@ -86,3 +86,22 @@ a {
     background: $primary;
     border-radius: 10px;
 }
+
+.contentGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & section {
+        flex-basis: 48%;
+        margin-bottom: 5rem;
+
+        @media only screen and (max-width: 800px) {
+            flex-basis: 100%;
+        }
+
+        &:last-of-type {
+            margin-bottom: unset;
+        }
+    }
+}
