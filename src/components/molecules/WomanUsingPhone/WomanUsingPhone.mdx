@@ -1,0 +1,36 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as WomanUsingPhone from "./WomanUsingPhone.stories";
+
+<Meta title="WomanUsingPhone" of={WomanUsingPhone} />
+
+# Documentação da molécula WomanUsingPhone
+
+---
+
+Esse componente `WomanUsingPhone` representa 2 SVGs que ilustram uma mulher
+utilizando um celular.
+
+Possui animação ao passar o mouse por cima (hover).
+
+-   **Componente de Servidor**
+
+## Props
+
+Não aplicável.
+
+## Stories
+
+### Default
+
+<Canvas of={WomanUsingPhone.Default} />
+
+## Exemplo de uso
+
+````tsx
+import { WomanUsingPhone } from "./WomanUsingPhone";
+
+function App() {
+    return <WomanUsingPhone />;
+}
+```./WomanUsingPhone.stories
+````

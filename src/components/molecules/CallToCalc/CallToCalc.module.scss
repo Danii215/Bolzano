@@ -1,0 +1,31 @@
+@import "/src/assets/sass/utils/variables";
+
+.callToCalc {
+    width: 100%;
+    padding: 3.2rem;
+
+    margin-top: 7rem;
+
+    display: flex;
+    flex-flow: column;
+
+    background-color: $silver;
+
+    & > article {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    & section {
+        width: 100%;
+
+        display: flex;
+
+        & h3 {
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+}

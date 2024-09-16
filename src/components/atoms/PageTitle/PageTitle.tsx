@@ -6,10 +6,14 @@ export function PageTitle({ title, titleHighlight, subtitle }: PageTitleProps) {
         <section className={style.pagetitle}>
             <h2>
                 {title}
-                <br />
-                <span>{titleHighlight}</span>
+                {titleHighlight && (
+                    <>
+                        <br />
+                        <span>{titleHighlight}</span>
+                    </>
+                )}
             </h2>
-            <p>{subtitle}</p>
+            {subtitle && <p>{subtitle}</p>}
         </section>
     );
 }

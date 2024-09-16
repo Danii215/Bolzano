@@ -1,0 +1,35 @@
+.womanUsingPhone {
+    position: relative;
+
+    transition: all 0.2s ease-in-out;
+
+    width: fit-content;
+    margin-top: 9rem;
+
+    animation: float 2s alternate-reverse infinite ease-in-out;
+
+    & img:first-child {
+        position: absolute;
+        left: 35%;
+        bottom: 14%;
+        z-index: -1;
+
+        transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+        & img:first-child {
+            left: 33%;
+            bottom: 18%;
+        }
+    }
+}
+
+@keyframes float {
+    from {
+        transform: translate(3%, 2%);
+    }
+    to {
+        transform: translate(3%, -2%);
+    }
+}

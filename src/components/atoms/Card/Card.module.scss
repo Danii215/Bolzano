@@ -17,7 +17,7 @@
     }
 
     &__square {
-        width: 85%;
+        width: 70%;
         margin-top: -7rem;
 
         background-color: $silver;
@@ -39,6 +39,8 @@
         }
 
         & a {
+            margin-left: 3rem;
+
             display: flex;
             align-items: center;
             gap: 1rem;

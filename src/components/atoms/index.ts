@@ -13,3 +13,4 @@ export { ManHoldingPhone } from "./ManHoldingPhone/ManHoldingPhone";
 export { Phone } from "./Phone/Phone";
 export { Button } from "./Button/Button";
 export { Content } from "./Content/Content";
+export { Card } from "./Card/Card";

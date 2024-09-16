@@ -1,0 +1,82 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as Suggestion from "./Suggestion.stories";
+
+<Meta title="Suggestion" of={Suggestion} />
+
+# Documentação do organismo Suggestion
+
+---
+
+O organismo `Suggestion` representa um `Content`, usado somente para título
+e conteúdo textual, seguido de um botão que convida o usuário à fazer alguma
+coisa. Além disso, tem um componente (normalmente uma das moléculas feitas de
+SVG) para ilustrar ao lado, ou não.
+
+Também pode ser definido sua orientação (se a imagem vem primeiro ou não).
+
+Esse componente, normalmente, é o último adicionado na página.
+
+-   **Componente de Servidor**
+
+## Props
+
+### title
+
+-   **Tipo**: `string`
+-   **Descrição**: O título,
+
+### content
+
+-   **Tipo**: `string`
+-   **Descrição**: Texto abaixo do título,
+
+### orientation
+
+-   **Tipo**: `"left" | "right"`
+-   **Descrição**: Orientação do componente,
+
+Todas as props do `Button`:
+
+### text
+
+-   **Tipo**: `string`
+-   **Descrição**: Texto do botão,
+
+### href
+
+-   **Tipo**: `string`
+-   **Descrição**: O link que o botão redireciona o usuário para,
+
+Somado à:
+
+### children
+
+-   **Tipo**: `React.ReactNode`
+-   **Descrição**: Esse componente espera a imagem como filho.
+
+## Stories
+
+### Default
+
+<Canvas of={Suggestion.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { Suggestion } from "./Suggestion";
+
+function App() {
+    return (
+        <Suggestion
+            text={{
+                title: "Projeto de",
+                titleHighlight: "Cálculo Numérico Computacional",
+                subtitle:
+                    "Projeto explicativo sobre o matemático Bernard Bolzano, seu trabalho, e o funcionamento do método da bissecção no cálculo de zero de funções.",
+            }}
+        >
+            <WomanUsingPhone />
+        </Suggestion>
+    );
+}
+```

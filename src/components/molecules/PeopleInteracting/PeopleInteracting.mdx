@@ -1,0 +1,35 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as PeopleInteracting from "./PeopleInteracting.stories";
+
+<Meta title="PeopleInteracting" of={PeopleInteracting} />
+
+# Documentação do átomo PeopleInteracting
+
+---
+
+Esse componente `PeopleInteracting` representa 2 SVGs que ilustram duas pessoas
+interagindo ao lado de um celular gigante.
+
+Possui animação ao passar o mouse por cima (hover).
+
+-   **Componente de Servidor**
+
+## Props
+
+Não aplicável.
+
+## Stories
+
+### Default
+
+<Canvas of={PeopleInteracting.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { PeopleInteracting } from "./PeopleInteracting";
+
+function App() {
+    return <PeopleInteracting />;
+}
+```

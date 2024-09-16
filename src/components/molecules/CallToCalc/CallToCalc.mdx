@@ -1,0 +1,34 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as CallToCalc from "./CallToCalc.stories";
+
+<Meta title="CallToCalc" of={CallToCalc} />
+
+# Documentação da molécula CallToCalc
+
+---
+
+A molécula `CallToCalc` coloca um título (Content) e um botão de CTA (Call to
+Action), para convidar o usuário à fazer alguma coisa. No caso padrão, à usar a
+calculadora.
+
+-   **Componente de Servidor**
+
+## Props
+
+Não aplicável.
+
+## Stories
+
+### Default
+
+<Canvas of={CallToCalc.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { CallToCalc } from "./CallToCalc";
+
+function App() {
+    return <CallToCalc />;
+}
+```

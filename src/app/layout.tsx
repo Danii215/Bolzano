@@ -49,7 +49,7 @@ export default function RootLayout({
                 <Header
                     items={[
                         { href: "/", label: "Início" },
-                        { href: "/matematico", label: "Sobre o Matemático" },
+                        { href: "/bolzano", label: "Sobre o Matemático" },
                         { href: "/teorema", label: "Sobre o Teorema" },
                         { href: "/bisseccao", label: "Método da Bissecção" },
                         { href: "/calculadora", label: "Calculadora" },

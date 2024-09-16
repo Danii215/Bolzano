@@ -1,5 +1,5 @@
 export interface PageTitleProps {
     title: string;
-    titleHighlight: string;
+    titleHighlight?: string;
     subtitle?: string;
 }

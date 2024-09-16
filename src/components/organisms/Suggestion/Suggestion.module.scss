@@ -1,0 +1,25 @@
+.suggestion {
+    display: flex;
+    align-items: center;
+    gap: 4.9rem;
+
+    & article:first-of-type {
+        width: 44.2rem;
+    }
+
+    & article:last-of-type {
+        display: flex;
+        flex-flow: column;
+        gap: 1.6rem;
+
+        width: 50%;
+    }
+
+    & a {
+        margin-top: 1.6rem;
+    }
+
+    &--right {
+        flex-flow: row-reverse;
+    }
+}

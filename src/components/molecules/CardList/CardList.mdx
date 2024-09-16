@@ -1,0 +1,33 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as CardList from "./CardList.stories";
+
+<Meta title="CardList" of={CardList} />
+
+# Documentação da molécula CardList
+
+---
+
+Essa molécula reúne três átomos Card com props já definidas para apresentação.
+Organiza os cards de forma centralizada.
+
+-   **Componente de Servidor**
+
+## Props
+
+Não aplicável.
+
+## Stories
+
+### Default
+
+<Canvas of={CardList.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { CardList } from "./CardList";
+
+function App() {
+    return <CardList />;
+}
+```
