@@ -5,6 +5,10 @@
 
     & article:first-of-type {
         width: 44.2rem;
+
+        @media only screen and (max-width: 800px) {
+            width: fit-content;
+        }
     }
 
     & article:last-of-type {
@@ -13,6 +17,11 @@
         gap: 1.6rem;
 
         width: 50%;
+
+        @media only screen and (max-width: 800px) {
+            width: 100%;
+            align-items: center;
+        }
     }
 
     & a {
@@ -21,5 +30,10 @@
 
     &--right {
         flex-flow: row-reverse;
+    }
+
+    @media only screen and (max-width: 800px) {
+        flex-flow: column-reverse;
+        text-align: center;
     }
 }
