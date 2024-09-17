@@ -16,7 +16,7 @@ export default function Teorema() {
             <section className="contentGrid wrapper">
                 <Content title="Introdução ao Teorema de Bolzano">
                     <p>
-                        O Teorema de Bolzano, também conhecido como Teorema do
+                        {`O Teorema de Bolzano, também conhecido como Teorema do
                         Valor Intermediário, é um dos resultados mais
                         fundamentais da análise matemática. Este teorema afirma
                         que, se uma função contínua assume valores opostos em
@@ -24,7 +24,7 @@ export default function Teorema() {
                         menos um ponto dentro desse intervalo no qual a função
                         se anula. Isso significa que, sob as condições certas,
                         uma função contínua que "cruza" o eixo xxx em um
-                        intervalo deve ter pelo menos um zero nesse intervalo.
+                        intervalo deve ter pelo menos um zero nesse intervalo.`}
                     </p>
                     <p>
                         O teorema é crucial para a compreensão da continuidade e
@@ -86,9 +86,9 @@ export default function Teorema() {
                     <ol>
                         <li>{`Seja f contínua em [a,b], com f(a) < 0 e f(b) > 0.`}</li>
                         <li>
-                            Como a função é contínua, ela não pode sofrer
+                            {`Como a função é contínua, ela não pode sofrer
                             "saltos" abruptos. Dividimos o intervalo [a,b] no
-                            ponto médio c = (a+b) / 2.
+                            ponto médio c = (a+b) / 2.`}
                         </li>
                         <li>Se f(c) = 0, encontramos a solução.</li>
                         <li>Se f(c) ≠ 0, verificamos o sinal de f(c):</li>
@@ -111,14 +111,14 @@ export default function Teorema() {
                 </Content>
                 <Content title="Contexto Histórico do Teorema de Bolzano">
                     <p>
-                        Bernard Bolzano formulou este teorema em 1817, em sua
+                        {`Bernard Bolzano formulou este teorema em 1817, em sua
                         obra Rein analytischer Beweis ("Uma Prova Puramente
                         Analítica"), que procurava estabelecer rigor matemático
                         em uma época em que muitos conceitos de cálculo ainda
                         eram informais e baseados em intuições geométricas.
                         Naquele período, o cálculo infinitesimal desenvolvido
                         por matemáticos como Newton e Leibniz carecia de uma
-                        fundamentação sólida.
+                        fundamentação sólida.`}
                     </p>
                     <p>
                         Bolzano foi um dos primeiros matemáticos a tentar

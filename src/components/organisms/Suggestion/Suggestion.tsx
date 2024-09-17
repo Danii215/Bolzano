@@ -1,7 +1,6 @@
 import { Button, Content } from "@/components/atoms";
 import style from "./Suggestion.module.scss";
 import { SuggestionProps } from "./Suggestion.types";
-import { PeopleInteracting } from "@/components/molecules";
 
 export function Suggestion({
     title,

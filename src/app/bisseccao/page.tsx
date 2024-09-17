@@ -33,10 +33,10 @@ export default function Bisseccao() {
                     <h4>Explicação Intuitiva</h4>
                     <p>{`Imagine que a função f(x) descreve uma curva no plano cartesiano. Se em um ponto a, a curva está abaixo do eixo x (ou seja, f(a) < 0), e em outro ponto b, ela está acima do eixo x (ou seja, f(b)>0), então a curva deve, necessariamente, "cruzar" o eixo x em algum ponto entre a e b. Esse ponto c, onde a função cruza o eixo x, é uma solução da equação f(x)=0.`}</p>
                     <p>
-                        Esse teorema depende da ideia de continuidade: a função
+                        {`Esse teorema depende da ideia de continuidade: a função
                         não pode "pular" de um valor negativo para um valor
                         positivo sem passar pelo zero, o que é garantido pela
-                        continuidade da função em [a,b].
+                        continuidade da função em [a,b].`}
                     </p>
                 </Content>
                 <Content title="Exemplo Prático">

@@ -69,7 +69,7 @@ export default function Bolzano() {
                 <Content title="Contribuições Filosóficas">
                     <h4>Filosofia da Matemática</h4>
                     <p>
-                        Bolzano também deixou uma marca significativa na
+                        {`Bolzano também deixou uma marca significativa na
                         filosofia da matemática, particularmente em sua teoria
                         da "verdade em si". Ele acreditava que as verdades
                         matemáticas existiam independentemente de nossa
@@ -77,7 +77,7 @@ export default function Bolzano() {
                         contrastava com a de filósofos como Immanuel Kant, que
                         defendia que o conhecimento matemático estava
                         profundamente ligado à experiência sensível e às
-                        categorias de entendimento.{" "}
+                        categorias de entendimento.`}
                     </p>
                     <p>
                         Em sua obra Theory of Science (Wissenschaftslehre),
@@ -146,13 +146,13 @@ export default function Bolzano() {
                         moderna.{" "}
                     </p>
                     <p>
-                        Bolzano desenvolveu uma concepção inovadora de provas
+                        {`Bolzano desenvolveu uma concepção inovadora de provas
                         matemáticas e introduziu a ideia de uma "prova puramente
                         analítica", que poderia ser válida independentemente da
                         intuição geométrica. Ele foi um dos primeiros a sugerir
                         que a matemática deveria ser construída a partir de um
                         sistema de axiomas rigorosos, o que influenciou o
-                        desenvolvimento da lógica formal no final do século XIX.
+                        desenvolvimento da lógica formal no final do século XIX.`}
                     </p>
                 </Content>
                 <Content title="Recepção e Impacto Póstumo">
