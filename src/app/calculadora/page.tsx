@@ -11,7 +11,10 @@ export default function Teorema() {
                     titleHighlight: "Calculadora",
                 }}
             >
-                <Coin title="Calculadora" image={Calculadora} />
+                <Coin
+                    title="Imagem ilustrativa de uma calculadora"
+                    image={Calculadora}
+                />
             </Banner>
             <Calculator />
             <CardList />

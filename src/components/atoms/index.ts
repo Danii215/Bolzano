@@ -15,3 +15,4 @@ export { Button } from "./Button/Button";
 export { Content } from "./Content/Content";
 export { Card } from "./Card/Card";
 export { TextInput } from "./TextInput/TextInput";
+export { LoadingSkeleton } from "./LoadingSkeleton/LoadingSkeleton";

@@ -11,7 +11,7 @@ export default function Bolzano() {
                     titleHighlight: "Bernard Bolzano",
                 }}
             >
-                <Coin title="Berbard Bolzano" image={Bernard} />
+                <Coin title="Retrato de Bernard Bolzano" image={Bernard} />
             </Banner>
             <section className="contentGrid wrapper">
                 <Content title="Introdução">

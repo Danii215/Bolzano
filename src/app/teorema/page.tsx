@@ -11,7 +11,10 @@ export default function Teorema() {
                     titleHighlight: "Teorema de Bolzano",
                 }}
             >
-                <Coin title="Berbard Bolzano" image={Teorem} />
+                <Coin
+                    title="Plano cartesiano desenhado um gráfico"
+                    image={Teorem}
+                />
             </Banner>
             <section className="contentGrid wrapper">
                 <Content title="Introdução ao Teorema de Bolzano">

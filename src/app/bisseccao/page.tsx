@@ -11,7 +11,10 @@ export default function Bisseccao() {
                     titleHighlight: "Método da Bissecção",
                 }}
             >
-                <Coin title="Berbard Bolzano" image={Imagem} />
+                <Coin
+                    title="Imagem ilustrando o método da bissecção"
+                    image={Imagem}
+                />
             </Banner>
             <section className="contentGrid wrapper">
                 <Content title="Introdução ao Método da Bisseção">
