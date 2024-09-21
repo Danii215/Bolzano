@@ -1,0 +1,29 @@
+@import "/src/assets/sass/utils/variables.scss";
+
+.textInput {
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+
+    & label {
+        font-weight: 600;
+        font-size: 2rem;
+        color: $darkGrey;
+    }
+
+    & input {
+        padding: 1.6rem 3.2rem;
+        width: 100%;
+
+        border: 0.2rem solid $primary;
+        border-radius: 0.5rem;
+
+        font-size: 1.8rem;
+        color: $primary;
+
+        &::placeholder {
+            font-size: 1.8rem;
+            color: $primary;
+        }
+    }
+}

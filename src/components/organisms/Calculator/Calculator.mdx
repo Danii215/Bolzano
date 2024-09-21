@@ -1,0 +1,35 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as Calculator from "./Calculator.stories";
+
+<Meta title="Calculator" of={Calculator} />
+
+# Documentação do organismo Calculator
+
+---
+
+O organismo `Calculator` representa a calculadora, sendo construído das
+moléculas `Table`, pra tabela que exibe os dados (resultados), e `CalcForm`,
+que contém o formulário que recebe os dados do usuário para efetuar os
+cálculos.
+
+-   **Possui componente de Cliente: `CalcForm`**
+
+## Props
+
+Não aplicável.
+
+## Stories
+
+### Default
+
+<Canvas of={Calculator.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { Calculator } from "./Calculator";
+
+function App() {
+    return <Calculator />;
+}
+```

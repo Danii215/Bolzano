@@ -10,3 +10,4 @@ export { CardList } from "./molecules";
 export { CallToCalc } from "./molecules";
 export { Banner } from "./organisms";
 export { Suggestion } from "./organisms";
+export { Calculator } from "./organisms";

@@ -5,3 +5,5 @@ export { CardList } from "./CardList/CardList";
 export { CallToCalc } from "./CallToCalc/CallToCalc";
 export { PeopleInteracting } from "./PeopleInteracting/PeopleInteracting";
 export { WomanUsingPhone } from "./WomanUsingPhone/WomanUsingPhone";
+export { CalcForm } from "./CalcForm/CalcForm";
+export { Table } from "./Table/Table";

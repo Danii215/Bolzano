@@ -1,0 +1,66 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as Table from "./Table.stories";
+
+<Meta title="Table" of={Table} />
+
+# Documentação da molécula Table
+
+---
+
+A molécula `Table` organiza headers e linhas em formato de tabela usando as
+células `TableCell` respectivas.
+
+-   **Componente de Servidor**
+
+## Props
+
+### header
+
+-   **Tipo**: `Array<string>`
+-   **Descrição**: Lista de nomes de cada coluna da tabela.
+
+### rows
+
+-   **Tipo**: `Array<Array<string>>`
+-   **Descrição**: Lista de quantas linhas existirão na tabela. As arrays
+    dentro dessa array define os valores exibidos nas células da respectiva linha.
+
+## Stories
+
+### Default
+
+<Canvas of={Table.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { Table } from "./Table";
+
+function App() {
+    return (
+        <Table
+            header={[
+                "K",
+                "a",
+                "b",
+                "Média",
+                "f(a)",
+                "f(Média)",
+                "Sinal",
+                "Erro",
+            ]}
+            rows={[
+                ["0", "0", "0", "0", "0", "0", "0", "0"],
+                ["1", "0", "0", "0", "0", "0", "0", "0"],
+                ["2", "0", "0", "0", "0", "0", "0", "0"],
+                ["3", "0", "0", "0", "0", "0", "0", "0"],
+                ["4", "0", "0", "0", "0", "0", "0", "0"],
+                ["5", "0", "0", "0", "0", "0", "0", "0"],
+                ["6", "0", "0", "0", "0", "0", "0", "0"],
+                ["7", "0", "0", "0", "0", "0", "0", "0"],
+                ["8", "0", "0", "0", "0", "0", "0", "0"],
+            ]}
+        />
+    );
+}
+```

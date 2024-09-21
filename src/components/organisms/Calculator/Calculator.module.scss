@@ -1,0 +1,11 @@
+.calculator {
+    display: flex;
+    flex-flow: column;
+    gap: 3rem;
+
+    width: 90%;
+
+    & > article {
+        overflow-x: scroll;
+    }
+}

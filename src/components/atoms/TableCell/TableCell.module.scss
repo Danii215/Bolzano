@@ -1,0 +1,14 @@
+@import "/src/assets/sass/utils/variables.scss";
+
+.tableCell {
+    padding: 1.6rem 3.2rem;
+    font-size: 1.8rem;
+    text-align: center;
+    color: $primary;
+    border: 0.2rem solid $primary;
+
+    &--header {
+        color: #fff;
+        background-color: $primary;
+    }
+}

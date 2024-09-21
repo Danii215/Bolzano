@@ -1,0 +1,44 @@
+@import "/src/assets/sass/utils/variables.scss";
+
+.calcForm {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 3rem;
+
+    & > article {
+        display: grid;
+        justify-content: center;
+        grid-template-rows: 12rem;
+        grid-template-columns: 49% 49%;
+        gap: 1.5rem;
+
+        & > div {
+            justify-content: space-between;
+        }
+
+        @media only screen and (max-width: 800px) {
+            display: flex;
+            flex-flow: column;
+            width: 100%;
+        }
+    }
+
+    & input[type="submit"] {
+        display: block;
+        padding: 1.4rem 3.2rem;
+        width: 99.4%;
+        height: 5.2rem;
+
+        background-color: $primary;
+        border-radius: 0.5rem;
+
+        color: #fff;
+        font-size: 1.6rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        align-items: unset;
+        width: 100%;
+    }
+}

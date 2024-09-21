@@ -1,0 +1,44 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as TableCell from "./TableCell.stories";
+
+<Meta title="TableCell" of={TableCell} />
+
+# Documentação do átomo TableCell
+
+---
+
+Representa uma célula de tabela.
+
+-   **Componente de Servidor**
+
+## Props
+
+### text
+
+-   **Tipo**: `string`
+-   **Descrição**: O texto escrito na célula.
+
+### header
+
+-   **Tipo**: `boolean`
+-   **Descrição**: Se a célula faz parte do header da tabela ou não.
+
+## Stories
+
+### Default
+
+<Canvas of={TableCell.Default} />
+
+### Header
+
+<Canvas of={TableCell.Header} />
+
+## Exemplo de uso
+
+```tsx
+import { TableCell } from "./TableCell";
+
+function App() {
+    return <TableCell text="0" header={false} />;
+}
+```

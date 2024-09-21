@@ -8,7 +8,7 @@ export function PageTitle({ title, titleHighlight, subtitle }: PageTitleProps) {
                 {title}
                 {titleHighlight && (
                     <>
-                        <br />
+                        {title && <br />}
                         <span>{titleHighlight}</span>
                     </>
                 )}

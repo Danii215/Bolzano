@@ -1,0 +1,51 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as TextInput from "./TextInput.stories";
+
+<Meta title="TextInput" of={TextInput} />
+
+# Documentação do átomo TextInput
+
+---
+
+Representa um simples input em que o usuário pode inserir texto.
+
+-   **Componente de Servidor**
+
+## Props
+
+### id
+
+-   **Tipo**: `string`
+-   **Descrição**: O identificador único e name do input.
+
+### label
+
+-   **Tipo**: `string`
+-   **Descrição**: O texto que fica acima do input e indica sua função.
+
+### placeholder
+
+-   **Tipo**: `string`
+-   **Descrição**: O texto dentro do input que dá um exemplo do que inserir.
+
+## Stories
+
+### Default
+
+<Canvas of={TextInput.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { TextInput } from "./TextInput";
+
+function App() {
+    return (
+        <TextInput
+            id="test"
+            label="Input de exemplo."
+            placeholder="Ex: danilosm215@gmail.com"
+        />
+    );
+}
+```

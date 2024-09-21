@@ -1,0 +1,36 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as CalcForm from "./CalcForm.stories";
+
+<Meta title="CalcForm" of={CalcForm} />
+
+# Documentação da molécula CalcForm
+
+---
+
+A molécula `CalcForm` reúne os 4 átomos de `TextInput` para obter do usuário o
+que for necessário pra calcular.
+
+A molécula também tem um input de submit para enviar a informação inserida pelo
+usuário.
+
+-   **Componente de Cliente**
+
+## Props
+
+Não aplicável.
+
+## Stories
+
+### Default
+
+<Canvas of={CalcForm.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { CalcForm } from "./CalcForm";
+
+function App() {
+    return <CalcForm />;
+}
+```
