@@ -21,8 +21,11 @@
             background-color: #fff;
             background-repeat: no-repeat;
             background-position: center;
-            border-radius: 100%;
             display: block;
+
+            border-radius: 100%;
+
+            min-width: 3.6rem;
             width: 3.6rem;
             height: 3.6rem;
         }
