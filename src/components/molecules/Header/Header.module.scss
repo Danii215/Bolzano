@@ -1,5 +1,4 @@
 @import "/src/assets/sass/utils/variables";
-@import "/src/assets/sass/utils/fonts";
 
 .header {
     display: flex;
@@ -26,7 +25,6 @@
             position: relative;
 
             color: $black;
-            font-family: $fontInter;
             font-size: 1.6rem;
             font-weight: 600;
             text-align: center;

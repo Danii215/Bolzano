@@ -4,6 +4,12 @@ import { CoinProps } from "./Coin.types";
 
 export function Coin({ title, image }: CoinProps) {
     return (
-        <Image className={style.coin} src={image} alt={title} title={title} />
+        <Image
+            priority
+            className={style.coin}
+            src={image}
+            alt={title}
+            title={title}
+        />
     );
 }

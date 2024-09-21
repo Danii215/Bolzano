@@ -16,6 +16,7 @@ export function Burger({ onClick }: BurgerProps) {
                 if (onClick) onClick(event);
                 onClick;
             }}
+            aria-label={(active ? "Fechar" : "Abrir") + " menu do cabeçalho"}
         >
             <div className={style.burger__line}></div>
         </button>

@@ -2,9 +2,14 @@ import type { Metadata } from "next";
 import "@/assets/sass/main.scss";
 import { Footer, Header } from "@/components";
 
+import { Inter } from "next/font/google";
+const inter = Inter({ subsets: ["latin"] });
+
 export async function generateMetadata(): Promise<Metadata> {
     return {
         title: "Bolzano",
+        description:
+            "Projeto de Cálculo Numérico Computacional | Calculadora do Teorema de Bolzano",
         openGraph: {
             locale: "pt_BR",
             siteName: "Bolzano",
@@ -44,7 +49,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="pt-BR">
+        <html lang="pt-BR" className={inter.className}>
             <body>
                 <Header
                     items={[

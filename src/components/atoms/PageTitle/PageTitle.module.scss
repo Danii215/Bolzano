@@ -6,7 +6,6 @@
     display: flex;
     flex-flow: column;
     gap: 1.6rem;
-    animation: intro 0.3s ease-in-out;
 
     & h2 {
         font-size: clamp(3rem, 6vw, 6.4rem);
@@ -27,16 +26,5 @@
     @media only screen and (max-width: 800px) {
         text-align: center;
         width: 100%;
-    }
-}
-
-@keyframes intro {
-    from {
-        opacity: 0;
-        transform: translate(-15%, 0);
-    }
-    to {
-        opacity: 1;
-        transform: translate(0, 0);
     }
 }
