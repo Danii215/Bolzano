@@ -2,6 +2,8 @@
 import { TextInput } from "@/components/atoms";
 import style from "./CalcForm.module.scss";
 import { FormEvent } from "react";
+import { CalculationRequirements } from "@/assets/logic";
+import { CalcFormProps } from "./CalcForm.types";
 
 interface calculatorFormInputNames {
     expression: HTMLInputElement;
@@ -10,18 +12,11 @@ interface calculatorFormInputNames {
     e: HTMLInputElement;
 }
 
-interface calculatorProps {
-    expression: string;
-    a: string;
-    b: string;
-    e: string;
-}
-
-export function CalcForm() {
+export function CalcForm({ defineCalculationRequirements }: CalcFormProps) {
     function submitHandler(event: FormEvent) {
         event.preventDefault();
 
-        const body: calculatorProps = {
+        const body: CalculationRequirements = {
             expression: (event.target as unknown as calculatorFormInputNames)
                 .expression.value,
             a: (event.target as unknown as calculatorFormInputNames).a.value,
@@ -29,8 +24,7 @@ export function CalcForm() {
             e: (event.target as unknown as calculatorFormInputNames).e.value,
         };
 
-        // @TODO enviar body pra calculadora calcular
-        console.log(body);
+        defineCalculationRequirements(body);
     }
 
     return (

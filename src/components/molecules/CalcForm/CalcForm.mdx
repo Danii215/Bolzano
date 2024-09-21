@@ -17,7 +17,10 @@ usuário.
 
 ## Props
 
-Não aplicável.
+### defineCalculationRequirements
+
+-   **Tipo**: `Function`
+-   **Descrição**: Função para fazer após reunir as informações para cálculo.
 
 ## Stories
 
@@ -31,6 +34,12 @@ Não aplicável.
 import { CalcForm } from "./CalcForm";
 
 function App() {
-    return <CalcForm />;
+    return (
+        <CalcForm
+            defineCalculationRequirements={(data: CalculationRequirements) =>
+                console.log(data)
+            }
+        />
+    );
 }
 ```

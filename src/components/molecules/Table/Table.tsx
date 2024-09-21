@@ -6,20 +6,24 @@ export function Table({ header, rows }: TableProps) {
         <table>
             <thead>
                 <tr>
-                    {header?.map((thName) => (
-                        <TableCell text={thName} header={true} key={thName} />
+                    {header?.map((thName, index) => (
+                        <TableCell
+                            text={thName}
+                            header={true}
+                            key={"header" + thName + index}
+                        />
                     ))}
                 </tr>
             </thead>
             <tbody>
                 {rows?.map((_, index) => {
                     return (
-                        <tr key={"coluna" + index}>
-                            {rows[index]?.map((tdName) => (
+                        <tr key={"linha" + index}>
+                            {rows[index]?.map((tdName, index) => (
                                 <TableCell
                                     text={tdName}
                                     header={false}
-                                    key={tdName}
+                                    key={"coluna" + tdName + index}
                                 />
                             ))}
                         </tr>

@@ -5,6 +5,9 @@ import "@/assets/sass/main.scss";
 const meta = {
     title: "Moléculas/CalcForm",
     component: CalcForm,
+    argTypes: {
+        defineCalculationRequirements: Function,
+    },
 } satisfies Meta<typeof CalcForm>;
 
 export default meta;
