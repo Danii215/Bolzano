@@ -3,14 +3,22 @@ import { CalcForm, Table } from "@/components/molecules";
 import style from "./Calculator.module.scss";
 import { useEffect, useState } from "react";
 import { Calculate, CalculationRequirements } from "@/assets/logic";
+import { Message } from "@/components/atoms";
 
 export function Calculator() {
     const [rows, setRows] = useState<string[][]>([]);
+    const [success, setSuccess] = useState<boolean>(true);
+    const [message, setMessage] = useState<string>("");
     const [calculationRequirements, setCalculationRequirements] =
         useState<CalculationRequirements>();
 
     useEffect(() => {
-        calculationRequirements && setRows(Calculate(calculationRequirements));
+        if (calculationRequirements) {
+            const result = Calculate(calculationRequirements);
+            setRows(result.data);
+            setSuccess(result.success);
+            setMessage(result.message);
+        }
     }, [calculationRequirements]);
 
     return (
@@ -35,6 +43,7 @@ export function Calculator() {
                     rows={rows}
                 />
             </article>
+            {message && <Message success={success} message={message} />}
         </section>
     );
 }

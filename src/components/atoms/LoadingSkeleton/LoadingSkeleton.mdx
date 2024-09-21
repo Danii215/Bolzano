@@ -1,0 +1,47 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as LoadingSkeleton from "./LoadingSkeleton.stories";
+
+<Meta title="LoadingSkeleton" of={LoadingSkeleton} />
+
+# Documentação do átomo LoadingSkeleton
+
+---
+
+O componente `LoadingSkeleton` é um cartão padrão para usar de fallback durante
+o carregamento de outros componentes. Seu tamanho é variado para se adequar ao
+tamanho do componente que estará carregando.
+
+-   **Componente de Servidor**
+
+## Props
+
+### width
+
+-   **Tipo**: `number`
+-   **Descrição**: O comprimento do cartão.
+
+### height
+
+-   **Tipo**: `number`
+-   **Descrição**: A altura do cartão.
+
+## Stories
+
+### Default
+
+<Canvas of={LoadingSkeleton.Default} />
+
+## Exemplo de uso
+
+```tsx
+import { LoadingSkeleton } from "./LoadingSkeleton";
+import { Suspense } from "react";
+
+function App() {
+    return (
+        <Suspense fallback={<LoadingSkeleton width={300} height={300} />}>
+            ...
+        </Suspense>
+    );
+}
+```

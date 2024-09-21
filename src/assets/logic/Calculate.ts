@@ -1,9 +1,14 @@
+import { CalculateResource } from "./Calculate.resource";
 import { CalculationRequirements } from "./CalculationRequirements";
 import { evaluate } from "mathjs";
 
-export function Calculate(data: CalculationRequirements): Array<Array<string>> {
-    function f(x: number): number {
-        return evaluate(data.expression.replace(/x/g, `(${x})`));
+export function Calculate(data: CalculationRequirements): CalculateResource {
+    function f(x: number): number | undefined {
+        try {
+            return evaluate(data.expression.replace(/x/g, `(${x})`));
+        } catch {
+            return undefined;
+        }
     }
 
     function calculateK(a: number, b: number, erro: number): number {
@@ -17,37 +22,56 @@ export function Calculate(data: CalculationRequirements): Array<Array<string>> {
     const erro: number = +data.e;
     const K: number = calculateK(a, b, erro);
 
-    const iterationRows = [];
+    let lastInterval: Array<string> = [];
+    const iterationRows: Array<Array<string>> = [];
 
     for (let k = 0; k <= K; k++) {
-        const fa: number = f(a);
+        const fa: number | undefined = f(a);
         const media: number = (a + b) / 2;
-        const fmedia: number = f(media);
+        const fmedia: number | undefined = f(media);
         const erroAtual: number = b - a;
+
+        if (fa == undefined || fmedia == undefined) {
+            return {
+                message:
+                    "Ocorreu um erro. Por favor, verifique os dados inseridos.",
+                success: false,
+                data: [],
+            };
+        }
 
         const sinal: "+" | "-" = fa * fmedia > 0 ? "+" : "-";
 
+        const aFormatted = a.toFixed(6).toString();
+        const bFormatted = b.toFixed(6).toString();
+
         iterationRows.push([
             k.toString(),
-            a.toFixed(6).toString(),
-            b.toFixed(6).toString(),
+            aFormatted,
+            bFormatted,
             media.toFixed(6).toString(),
             fa.toFixed(6).toString(),
             fmedia.toFixed(6).toString(),
-            sinal.toString(),
+            sinal,
             erroAtual.toFixed(6).toString(),
         ]);
 
-        if (sinal === "+") {
-            a = media;
-        } else {
-            b = media;
-        }
+        lastInterval = [aFormatted, bFormatted];
 
-        if (erroAtual < erro) {
-            break;
-        }
+        if (sinal === "+") a = media;
+        else b = media;
+
+        if (erroAtual < erro) break;
     }
 
-    return iterationRows;
+    return {
+        message:
+            "A sua raíz está dentro do intervalo [" +
+            lastInterval[0] +
+            ";" +
+            lastInterval[1] +
+            "].",
+        success: true,
+        data: iterationRows,
+    };
 }

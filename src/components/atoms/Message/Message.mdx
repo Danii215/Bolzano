@@ -1,0 +1,47 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import * as Message from "./Message.stories";
+
+<Meta title="Message" of={Message} />
+
+# Documentação do átomo Message
+
+---
+
+O átomo `Message` implica uma mensagem simples direcionada ao usuário.
+Pode expressar sucesso ou fracasso.
+
+-   **Componente de Servidor**
+
+## Props
+
+### success
+
+-   **Tipo**: `boolean`
+-   **Descrição**: Se a mensagem é de sucesso ou não.
+
+### message
+
+-   **Tipo**: `string`
+-   **Descrição**: O texto dito pela mensagem.
+
+## Stories
+
+### Default
+
+<Canvas of={Message.Default} />
+
+### Success
+
+<Canvas of={Message.Success} />
+
+## Exemplo de uso
+
+```tsx
+import { Message } from "./Message";
+
+function App() {
+    return (
+        <Message success={false} message="Ocorreu um erro. Tente novamente." />
+    );
+}
+```
