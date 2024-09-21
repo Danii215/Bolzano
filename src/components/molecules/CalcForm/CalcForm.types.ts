@@ -1,3 +1,5 @@
+import { CalculationRequirements } from "@/assets/logic";
+
 export interface CalcFormProps {
-    defineCalculationRequirements: Function;
+    defineCalculationRequirements: (data: CalculationRequirements) => void;
 }

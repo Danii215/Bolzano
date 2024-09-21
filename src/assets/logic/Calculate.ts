@@ -14,8 +14,8 @@ export function Calculate(data: CalculationRequirements): Array<Array<string>> {
 
     let a: number = +data.a;
     let b: number = +data.b;
-    let erro: number = +data.e;
-    let K: number = calculateK(a, b, erro);
+    const erro: number = +data.e;
+    const K: number = calculateK(a, b, erro);
 
     const iterationRows = [];
 
