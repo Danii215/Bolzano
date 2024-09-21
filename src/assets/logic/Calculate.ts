@@ -2,6 +2,14 @@ import { CalculateResource } from "./Calculate.resource";
 import { CalculationRequirements } from "./CalculationRequirements";
 import { evaluate } from "mathjs";
 
+function calculateK(a: number, b: number, erro: number): number {
+    return Math.ceil((Math.log10(b - a) - Math.log10(erro)) / Math.log10(2));
+}
+
+function numberFormatter(x: number): string {
+    return x.toFixed(6).toString();
+}
+
 export function Calculate(data: CalculationRequirements): CalculateResource {
     function f(x: number): number | undefined {
         try {
@@ -11,15 +19,34 @@ export function Calculate(data: CalculationRequirements): CalculateResource {
         }
     }
 
-    function calculateK(a: number, b: number, erro: number): number {
-        return Math.ceil(
-            (Math.log10(b - a) - Math.log10(erro)) / Math.log10(2),
-        );
+    let a: number = parseFloat(data.a);
+    let b: number = parseFloat(data.b);
+    const erro: number = parseFloat(data.e);
+
+    if (Number.isNaN(a) || Number.isNaN(b))
+        return {
+            message:
+                "Ocorreu um erro no intervalo selecionado. Por favor, verifique.",
+            success: false,
+            data: [],
+        };
+
+    if (Number.isNaN(erro))
+        return {
+            message:
+                "Ocorreu um erro na margem de erro escolhida. Por favor, verifique.",
+            success: false,
+            data: [],
+        };
+
+    if (erro <= 0) {
+        return {
+            message: "A margem de erro deve ser um número maior do que zero.",
+            success: false,
+            data: [],
+        };
     }
 
-    let a: number = +data.a;
-    let b: number = +data.b;
-    const erro: number = +data.e;
     const K: number = calculateK(a, b, erro);
 
     let lastInterval: Array<string> = [];
@@ -34,7 +61,7 @@ export function Calculate(data: CalculationRequirements): CalculateResource {
         if (fa == undefined || fmedia == undefined) {
             return {
                 message:
-                    "Ocorreu um erro. Por favor, verifique os dados inseridos.",
+                    "Ocorreu um erro. Por favor, verifique a expressão matemática inserida.",
                 success: false,
                 data: [],
             };
@@ -42,18 +69,18 @@ export function Calculate(data: CalculationRequirements): CalculateResource {
 
         const sinal: "+" | "-" = fa * fmedia > 0 ? "+" : "-";
 
-        const aFormatted = a.toFixed(6).toString();
-        const bFormatted = b.toFixed(6).toString();
+        const aFormatted = numberFormatter(a);
+        const bFormatted = numberFormatter(b);
 
         iterationRows.push([
             k.toString(),
             aFormatted,
             bFormatted,
-            media.toFixed(6).toString(),
-            fa.toFixed(6).toString(),
-            fmedia.toFixed(6).toString(),
+            numberFormatter(media),
+            numberFormatter(fa),
+            numberFormatter(fmedia),
             sinal,
-            erroAtual.toFixed(6).toString(),
+            numberFormatter(erroAtual),
         ]);
 
         lastInterval = [aFormatted, bFormatted];
